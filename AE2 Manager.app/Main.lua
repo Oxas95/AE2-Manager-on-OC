@@ -9,12 +9,14 @@ os.execute("Strings")
 
 local args = {...}
 
-local function Requete(_itemName, _comparator, _count, _toCraft, _exp)
+local function Requete(_itemName, _damage, _comparator, _count, _toCraft, _damage2, _exp)
   r = {
     itemName = _itemName,
+    damage = _damage,
     comparator = _comparator,
     count = tonumber(_count),
     toCraft = _toCraft,
+    damage2 = _damage2
     exp = _exp,
     status = ""
   }
@@ -50,7 +52,7 @@ local function getItem(demandes)
   item = me.getItemsInNetwork()
   for j = 1, #demandes do
     for i = 1, #item do
-      if item[i].name == demandes[j].itemName then
+      if item[i].name == demandes[j].itemName and item[i].damage == demandes[j].damage then
         demandes[j].item = item[i]
         parseExp(demandes[j])
       end
@@ -63,7 +65,7 @@ local function getCraft(demandes)
   for j = 1, #demandes do
     for i = 1, #craft do
       itemStack = craft[i].getItemStack()
-      if itemStack.name == demandes[j].toCraft then
+      if itemStack.name == demandes[j].toCraft and itemStack.damage == demandes[j].damage2 then
         demandes[j].craft = craft[i]
       end
     end
@@ -87,7 +89,7 @@ local function readConfig(path)
     line = file:read()
     str = strings:split(line, ";")
     if str ~= nil then
-      r = Requete(str[0], str[1], str[2], str[3], str[4])
+      r = Requete(str[0], str[1], str[2], str[3], str[4], str[5], str[6])
       table.insert(demandes, r)
     end
   until line == nil
