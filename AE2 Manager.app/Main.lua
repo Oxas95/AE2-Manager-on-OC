@@ -17,8 +17,7 @@ local function Requete(_itemName, _damage, _comparator, _count, _toCraft, _damag
     count = tonumber(_count),
     toCraft = _toCraft,
     damage2 = _damage2,
-    exp = _exp,
-    status = ""
+    exp = _exp
   }
   return r
 end
