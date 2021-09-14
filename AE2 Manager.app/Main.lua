@@ -12,11 +12,11 @@ local args = {...}
 local function Requete(_itemName, _damage, _comparator, _count, _toCraft, _damage2, _exp)
   r = {
     itemName = _itemName,
-    damage = _damage,
+    damage = tonumber(_damage),
     comparator = _comparator,
     count = tonumber(_count),
     toCraft = _toCraft,
-    damage2 = _damage2,
+    damage2 = tonumber(_damage2),
     exp = _exp
   }
   return r
