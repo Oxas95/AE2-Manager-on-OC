@@ -26,5 +26,5 @@ Exemple :
 - (2000 - 1000)/9
 - 1000/9
 - 111.1111111111
-- 112 
+- 112  
 La valeur est arrondit à l'entier supérieur
