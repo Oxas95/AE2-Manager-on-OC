@@ -31,5 +31,6 @@ La valeur est arrondit à l'entier supérieur
 
 # Extras
 `.autorun.lua` : fichier à insérer dans une floppy disk pour créer une disquette d'installation du programme  
-téléchargement : wget -f https://raw.githubusercontent.com/Oxas95/AE2-Manager-on-OC/master/.autorun.lua  
-`turtle.lua`   : petit code à écrire dans une turtle de computercraft pour qu'elle vous donne le nom de l'item posé dans son inventaire au slot 1
+téléchargement : `wget -f https://raw.githubusercontent.com/Oxas95/AE2-Manager-on-OC/master/.autorun.lua`  
+`turtle.lua`   : petit code à écrire dans une turtle de computercraft pour qu'elle vous donne le nom de l'item posé dans son inventaire au slot 1  
+téléchargement : `pastebin get fYUhdNfx item` and run `item`
