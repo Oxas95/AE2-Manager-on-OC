@@ -16,4 +16,4 @@ shell.setWorkingDirectory("/home/" .. folder)
 os.execute("wget -f " .. repo .. "Main.lua")
 os.execute("wget -f " .. repo .. "Strings.lua")
 os.execute("wget -f " .. repo .. "config.cfg")
-
+os.execute("clear")
