@@ -28,3 +28,7 @@ Exemple :
 - 111.1111111111
 - 112  
 La valeur est arrondit à l'entier supérieur
+
+# Extras
+`.autorun.lua` : fichier à insérer dans une floppy disk pour créer une disquette d'installation du programme  
+`turtle.lua`   : petit code à écrire dans une turtle de computercraft pour qu'elle vous donne le nom de l'item posé dans son inventaire au slot 1
