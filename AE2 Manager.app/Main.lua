@@ -44,7 +44,7 @@ local function requestCraft(demande)
       demande.craft.request(demande.craftCount,false,cpus[i].name)
       refreshCpus()
       if cpus[i].busy == true then
-        print("create request for " .. demande.craftCount .. " " .. demande.craft.getItemStack().label .. " using cpu " .. cpu[i].name)
+        print("create request for " .. demande.craftCount .. " " .. demande.craft.getItemStack().label .. " using cpu " .. cpus[i].name)
         return
       end
     end
