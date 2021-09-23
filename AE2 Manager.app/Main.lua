@@ -38,6 +38,7 @@ local function requestCraft(demande)
   for i = 1, #cpus do
     if cpus[i].busy == false then
       demande.craft.request(demande.craftCount,false,cpus[i].name)
+      os.sleep(1)
       if cpus[i].busy == true then
         print("create request for " .. demande.craftCount .. " " .. demande.craft.getItemStack().label .. " using cpu " .. cpu[i].name)
         return
