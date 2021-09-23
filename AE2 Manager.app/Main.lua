@@ -37,7 +37,6 @@ end
 local function requestCraft(demande)
   for i = 1, #cpus do
     if cpus[i].busy == false then
-      --print("cpu ".. i .. " is free")
       demande.craft.request(demande.craftCount,false,cpus[i].name)
       if cpus[i].busy == true then
         print("create request for " .. demande.craftCount .. " " .. demande.craft.getItemStack().label .. " using cpu " .. cpu[i].name)
@@ -84,7 +83,6 @@ local function getCraft(demandes)
   for j = 1, #demandes do
     for i = 1, #craft do
       if item[i].name == demandes[j].toCraft and item[i].damage == demandes[j].damage2 then
-        print(j .. " select the craft " .. i)
         demandes[j].craft = craft[i]
         i = #craft + 1
       end
