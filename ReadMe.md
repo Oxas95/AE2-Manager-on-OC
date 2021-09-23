@@ -18,7 +18,7 @@ nom_item_1;damage_1;comparateur;quantité_1;nom_item_2;damage_2;quantité_2
 - quantité_1  : quantité à comparer avec celle de nom_item_1
 - nom_item_2  : nom de l'item à crafter si la condition est remplie
 - damage_2    : damage de l'item à crafter si la condition est remplie
-- quantité_2  : quantité de nom_item_2 à crafter si la condition est remplie, n = quantité de nom_item_1 stocké dans le système Applied
+- quantité_2  : quantité de nom_item_2 à crafter si la condition est remplie, n = quantité de nom_item_1 stocké dans le système Applied, m pour la quantité de l'item à fabriquer
 
 Exemple :
 `minecraft:redstone;0;>;1000;minecraft:redstone_block;0;(n - 1000)/9` signifie :  
