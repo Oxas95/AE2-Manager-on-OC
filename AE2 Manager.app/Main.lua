@@ -24,8 +24,12 @@ local function Requete(_itemName, _damage, _comparator, _count, _toCraft, _damag
   return r
 end
 
-local function getAvailableCpu()
+local function refreshCpus()
   cpus = me.getCpus()
+end
+
+local function getAvailableCpu()
+  refreshCpus()
   for i = 1, #cpus do
     if cpus[i].busy == false then
       return cpus[i]
@@ -89,10 +93,6 @@ local function getCraft(demandes)
       end
     end
   end
-end
-
-local function refreshCpus()
-  cpus = me.getCpus()
 end
 
 function refreshData(demandes)
